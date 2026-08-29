@@ -1,0 +1,53 @@
+#While loops
+is_running = True
+
+count = 1
+while count <= 4:
+  print(count)
+  count += 1
+
+#break and continue
+
+n = 0
+while n <= 10:
+n += 1
+if n == 3:
+  continue
+if n == 10:
+  break
+print(n)
+
+#for loops
+ for x in range(1,3):
+  print(x)
+
+for i in range(1, 5, 2):
+  print(i)
+
+
+items = ["apple", "orange", "banana"]
+  for item in items:
+    print(items)
+
+user = {"name": "Alice", "age": 25}
+  for key in user:
+    print(key)
+
+  for value in user:
+    print(value)
+
+  for key, value in user.items():
+    print(f"{key}: {value}") 
+
+#list comnprehension
+
+cubes = []
+    for x in range(1, 4):
+        cubes.append(x**3)
+
+#list comprehension
+cubes = [x**3 for x in range(1, 4)]
+
+  
+  
+  
