@@ -1,0 +1,28 @@
+#string methods
+name = input("Enter your name: ")
+print(len(name))
+name = name.capitalize()
+ result = name.upper()
+ result = name.lower()
+ result = name.isdigit()
+ result = name.isalpha()
+ print(result)
+ #string indexing
+ #[start : end : step]
+name = John James
+print(name[0])
+print(name[-2])
+#This prints J in john
+print(name[0:4])
+#This prints everything from J to the space
+print(credit_number[::2])
+#This prints everything between 2 indexes starting from 0 to 2 to 4
+#specifiers
+price = 3.14159
+print(f"The price is {price1:.2f}")
+print(f"The price is {price1:10}")
+print(f"The price is {price1:010}")
+print(f"The price is {price1:<10}")
+print(f"The price is {price1:^10}")
+print(f"The price is {price1:,}")
+print(f"The price is {price1:-,.2f}")
