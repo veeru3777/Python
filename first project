@@ -1,0 +1,49 @@
+print("Hello World")
+# single line comments
+"""
+Multi-line
+comments
+"""
+# Variables
+
+#Strings
+num = str(50)
+print("I am " + str(50) + " years old")
+print(f"I am {num} years old)
+
+#integers
+ num = 50
+ items = 10
+  num = int(70)
+  print(f"He is {num} years old)
+
+#float
+pi = 3.14159
+e = 2.718281828
+balance = 4580.99
+num = 70
+num = float(70)
+print(f"{num")
+
+#boolean
+is_running = true
+print(is_running)
+
+if is_running:
+  print("run the motor and do your tasks")
+else:
+  print("Don't do aything, return immediately to base")
+
+#type casting
+
+print(type(num))
+#this will output a floating point number
+num = 70.0
+num = int(num)
+num += 1
+print(f"value: {num}, type: {type(num)}")
+"""
+This is the end of the first python project  
+and application 
+of my learning
+"""
