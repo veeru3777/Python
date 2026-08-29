@@ -1,2 +1,2 @@
-# Python
-Hello, I am a person who is interested in coding, robotics, and business.  I am learning to code effectively using Python.
+Hello I am a aspiring engineer trying to get into a good college and become a successful engineer!
+# I am using this for listing my python and C++ journey
