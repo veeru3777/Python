@@ -1,0 +1,34 @@
+# if else statements
+
+level = int(input("Enter your level: "))
+
+if level >= 50:
+  print("You are allowed to fight the boss!")
+elif level < 0 or level > 70:
+  print("You cannot fight the boss!")
+else:
+  print("You are too low level to fight the boss.")
+
+#This is one of the most important topics in python
+
+#logical operators
+# or, and, not
+
+temp = 30
+is_stormy = False
+is_sunny = True
+
+if temp > 31 or temp < 0 or is_stormy:
+  print("The outdoor event is cancelled")
+else:
+  print("The event is still happening")
+#and operator
+if temp >= 28 and is_sunny:
+  print("It is hot outside")
+  print("It is sunny")
+else:
+  print("It is neither sunnny nor hot")
+#not operator
+if temp 28 > temp > 0 and not is_sunny:
+  print("It is warm and cloudy outside")
+#not operator gives the opposite result
