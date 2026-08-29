@@ -1,0 +1,56 @@
+import math
+#This will be about user input
+
+# Example
+#string
+name = input("What is your name: ")
+#This will ask the use for their name
+print(f"Welcome {name}")
+
+#integers
+num = int(input("Enter a number: "))
+print(f"The number is {num}")
+
+#float
+price = float(input("Enter a price of an item: "))
+print(f"The price of the item is {price}")
+
+#boolean
+is_ready = input("Ready? (y/n): ") == 'y'
+
+#list of words
+#use the split() method
+
+first_name, last_name = input("Enter your first and last name: ").split()
+#This splits the words and has two outputs
+print(f"{first_name, last_name}")
+
+#arithmetic operators
+#addition, subtraction, multiplication, and division
+x = x += 5
+x = x -= 5
+x = x *= 5
+x = x/=5
+x = x//=5
+#This removes decimal
+#remainder and exponent
+x = x %= 3
+x = x **= 2
+#built-in math functions
+x = abs(-7)
+x = pow(3, 2)
+x = pow(x, y, z)
+x = round(3.14159, 3)
+#import math module
+x = math.ceil(x)
+x = math.floor(x)
+x = math.sqrt(x)
+x = math.cbrt(x)
+x = math.exp(x)
+x = math.sin(x)
+x = math.cos(x)
+x = math.tan(x)
+x = math.degrees(x)
+x = math.radians(x)
+x = math.pi
+x = math.e
