@@ -1,0 +1,47 @@
+# lists 
+ nums = [1, 2, 3]
+for num in nums:
+  print(num)
+print(nums[0])
+nums.append(4)
+nums.insert(0,0.5)
+nums.remove(3)
+nums.pop()
+#set
+#unordered and changable, duplicates are not allowed
+my_set = {1, 2, 3 ,4, 5.5}
+
+print(1 in my_set)
+my_set.add(6)
+my_set.remove(3)
+my_set.pop()
+my_set.clear()
+
+#tuples
+GPS = (13, 14, 17)
+#ordered and unchangable
+print(GPS.index(0))
+GPS.count(1)
+for x in GPS:
+print(x)
+
+#Dictionaries
+#key:value
+
+my_dict{"name": "John","ID": "145"}
+
+my_dict.get("name")
+my.dict.update("email": "John.corps@gmail.com")
+my.dict.pop("ID")
+my_dict_popitem()
+
+keys = my_dict.keys
+for key in my_dict.keys():
+  print(key)
+
+values = my_dict.values
+for value in my_dict.values():
+  print(value)
+
+for key, value in my_dict.items():
+  print("key: value")
