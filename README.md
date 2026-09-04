@@ -1,2 +1,2 @@
-Hello I am a aspiring engineer trying to get into a good college and become a successful engineer!
+Hello I am trying to become a successful engineer and business!
 # I am using this for listing my python and C++ journey
