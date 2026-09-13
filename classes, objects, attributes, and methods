@@ -1,0 +1,32 @@
+class smartphone:
+#blueprint
+
+#constructor
+  def __init__(self, brand, model, battery_leve=100):
+      #attributes
+      self.brand = brand
+      self.model = model
+      self.battery = battery_level
+
+  #methods
+  def send_text(self, message):
+    if self.battery > 5:
+      self.battery -= 5
+       if self.battery > 5:
+            self.battery -= 5
+            print(f"[{self.brand} {self.model}]: Sent message -> '{message}'")
+        else:
+            print(f"[{self.brand} {self.model}]: Battery too low to send text!")
+
+    def charge_phone(self):
+        self.battery = 100
+        print(f"[{self.brand} {self.model}]: Phone fully charged to 100%.")
+
+  #objects
+  phone_one = smartphone(brand="Samsung", model="Galaxy S24", battery_level=8)
+
+  print(f"My first phone is a {phone_one.brand} with {phone_one.battery}% battery.")
+phone_one.send_text("Emergency text!")  # Uses 5% battery, drops to 3%
+phone_one.send_text("Can you hear me?") # Fails because battery is now too low
+phone_one.charge_phone() 
+      
