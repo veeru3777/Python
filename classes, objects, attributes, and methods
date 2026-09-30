@@ -2,7 +2,7 @@ class smartphone:
 #blueprint
 
 #constructor
-  def __init__(self, brand, model, battery_leve=100):
+  def __init__(self, brand, model, battery_level=100):
       #attributes
       self.brand = brand
       self.model = model
@@ -10,11 +10,11 @@ class smartphone:
 
   #methods
   def send_text(self, message):
-    if self.battery > 5:
+    if self.battery >= 5:
       self.battery -= 5
        if self.battery > 5:
             self.battery -= 5
-            print(f"[{self.brand} {self.model}]: Sent message -> '{message}'")
+            print(f"[{self.brand} {self.model}]: Sent message: '{message}'")
         else:
             print(f"[{self.brand} {self.model}]: Battery too low to send text!")
 
