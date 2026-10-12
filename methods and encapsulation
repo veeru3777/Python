@@ -1,0 +1,98 @@
+#InstanceMethods
+
+class RobotArm:
+  def __init__(self, joint_id):
+      self.joint_id = joint.id
+      self.angle_degress = 0.0
+
+  def rotate_to_angle(self, new_angle):
+      self.angle_degrees = new_degree
+      print(f"Joint {self.joint_id} rotated directly to {self.angle_degrees}")
+
+base_joint = RobotArm(joint_id=1)
+
+base_joint.rotate_to_angle(90.0)
+print(f"Current recorded angle: {base_joint.angle_degrees}")
+
+
+#classmethods
+
+class IndustrialConveyor:
+    factory_speed_limit = 10.0  
+
+    def __init__(self, conveyor_id, belt_width_mm, max_speed):
+        self.conveyor_id = conveyor_id
+        self.belt_width_mm = belt_width_mm
+        self.max_speed = max_speed
+
+   USE A: Overwriting a global class variable
+    @classmethod
+    def change_global_speed_limit(cls, new_limit):
+        cls.factory_speed_limit = new_limit
+        print(f"🏭 Fleet Update: Shared limit changed to {cls.factory_speed_limit} m/s")
+
+   USE B: Alternative Constructor factory preset
+    @classmethod
+    def build_wide_heavy_belt(cls, conveyor_id):
+        return cls(conveyor_id, belt_width_mm=1200, max_speed=5.0)
+
+# Use 1: Build an object with public presets
+heavy_belt = IndustrialConveyor.build_wide_heavy_belt("LINE_3")
+
+# Use 2: Change the global speed limit class variable
+IndustrialConveyor.change_global_speed_limit(15.5)
+
+#staticmethods
+
+class RoboticsMath:
+
+@staticmethod
+def calculate_travel_distance(wheel_diameter_mm, encoder_ticks, ticks_per_rev=360):
+    #Finds how far a rover traveled based on physical specs passed in
+    circumference = wheel_diameter_mm * 3.14159
+    revolutions = encoder_ticks/ticks_per_rev
+    return circumference * revolutions
+
+distance = RoboticsMath.calculate_travel_distance(wheel_diameter_mm=80, encoder_ticks=720)
+print(f"The wheel rolled precisely: {distance:.2f} mm.")
+
+
+#Encapsulation
+
+class WaterTank:
+    def __init__(self):
+        # HIDDEN VARIABLE (indicated by the single underscore)
+        # This keeps people from changing the water level directly.
+        self._water_level = 0.0
+
+    #(Getter & Setter)
+    @property
+    def water_level(self):
+        """Allows people to look at the water level safely."""
+        return self._water_level
+
+    @water_level.setter
+    def water_level(self, amount):
+        """Acts as a safety valve before changing the actual water."""
+        if amount > 100.0:
+            print("WARNING: Tank cannot hold that much! Capping it at 100 Liters.")
+            self._water_level = 100.0
+        elif amount < 0.0:
+            print("WARNING: Level cannot be negative! Setting to 0 Liters.")
+            self._water_level = 0.0
+        else:
+            self._water_level = amount
+            print(f"Water level successfully adjusted to {self._water_level} Liters.")
+
+
+
+my_tank = WaterTank()
+
+# 1. Setting a perfectly safe water level
+my_tank.water_level = 45.0  # Output: 💧 Water level successfully adjusted to 45.0 Liters.
+
+# 2. A bug in your code accidentally requests an impossible amount of water
+my_tank.water_level = 999.0
+
+# 3. Encapsulation intercepted the bad data and saved the hardware!
+print(f"Actual tank water level is safely at: {my_tank.water_level} Liters") # Output: 100.0 Liters
